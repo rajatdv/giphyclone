@@ -4,7 +4,7 @@ import CONFIG from './config';
 const searchGifs = (callback, oldList, offset, query) => {
   axios
     .get(
-      `http://api.giphy.com/v1/gifs/search?api_key=${CONFIG.API_KEY}&limit=${
+      `https://api.giphy.com/v1/gifs/search?api_key=${CONFIG.API_KEY}&limit=${
         CONFIG.LIMIT
       }&offset=${CONFIG.LIMIT * offset}&q=${query}`,
     )
@@ -20,7 +20,7 @@ const searchGifs = (callback, oldList, offset, query) => {
 const getTrendingGifs = (callback, oldList, offset) => {
   axios
     .get(
-      `http://api.giphy.com/v1/gifs/trending?api_key=${CONFIG.API_KEY}&limit=${
+      `https://api.giphy.com/v1/gifs/trending?api_key=${CONFIG.API_KEY}&limit=${
         CONFIG.LIMIT
       }&offset=${CONFIG.LIMIT * offset}`,
     )
